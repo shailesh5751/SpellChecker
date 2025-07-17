@@ -1,62 +1,48 @@
-# 💸 Expense Tracker Web App
+# 📝 Trie-Based Spell Checker
 
-A full-stack web application for managing personal finances. Built using the MERN stack (MongoDB, Express, React, Node.js) and Apollo GraphQL for API communication.
+A C++ implementation of a spell checker using Trie (Prefix Tree) data structure. Suggests corrections for misspelled words and supports fast prefix lookups.
 
 ## 🚀 Features
 
-- Add, edit, delete expenses and income entries
-- Real-time updates with Apollo Client
-- JWT-based authentication and protected routes
-- Modular GraphQL APIs for data operations
-- Responsive UI for desktop and mobile
+- Insert and search words in O(n) time
+- Suggest closest matches for invalid words
+- Lightweight and easy-to-understand implementation
+- Command-line based interface
 
-## 🛠️ Tech Stack
+## ⚙️ How It Works
 
-- **Frontend:** React.js, Apollo Client, Tailwind CSS
-- **Backend:** Node.js, Express.js, GraphQL, Passport.js
-- **Database:** MongoDB (with Mongoose)
-- **Authentication:** JWT + Passport.js
-- **Deployment:** Render / Netlify (optional)
+- Words are stored in a Trie structure for efficient prefix-matching.
+- When a word is not found, the program suggests corrections based on the prefix and edit distance.
 
-## 📦 Setup Instructions
+## 📦 Getting Started
 
-1. **Clone the repo**
+1. **Clone the repository**
    ```bash
-   git clone https://github.com/shailesh5751/ExpenseTracker.git
-   cd ExpenseTracker
-   
-2. **Install dependencies**
-```bash
-# Backend
-cd server
-npm install
+   git clone https://github.com/shailesh5751/SpellChecker.git
+   cd SpellChecker
 
-# Frontend
-cd ../client
-npm install
-```
-
-3. **Configure environment variables**
-
-In server/.env, set:
-
-```env
-MONGO_URI=your_mongo_connection_string
-JWT_SECRET=your_jwt_secret
-```
-
-4. **Run the app**
+2. **Compile the program**
 
 ```bash
-# Backend
-cd server
-npm run dev
-
-# Frontend
-cd ../client
-npm start
+g++ spellchecker.cpp -o spellchecker
 ```
+
+3. **Run it**
+```bash
+./spellchecker
+```
+
+## 🧪 Example
+```bash
+Enter word: appl
+Did you mean: apple?
+```
+
+## 📁 File Structure
+- spellchecker.cpp – main logic and Trie implementation
+
+- dictionary.txt – word list (optional, can be customized)
 
 ## 🧑‍💻 Author
-**Shailesh More**
-📫 [LinkedIn]{https://www.linkedin.com/in/shailesh-more} | [GitHub]{https://github.com/shailesh5751}
+Shailesh More
+📫 [LinkedIn](https://www.linkedin.com/in/shailesh-more) | [GitHub](https://github.com/shailesh5751)
